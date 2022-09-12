@@ -2,22 +2,21 @@
 
 <?php
     $namePage = "Recettes";
-    include './view/view_header.php';
-    
+    include '../view/view_header.php';   
 ?>
 <body class="d-flex flex-column min-vh-100">
     <div class="container">
-        <?php include './view/view_navbar.php'; ?>
+        <?php include '../view/view_navbar.php'; ?>
         <h1>Site de recettes</h1>
 
         <!-- inclusion des variables et fonctions -->
         <?php
-            include_once('./model/variables.php');
-            include_once('./model/functions.php');
+            include '../model/variables.php';
+            include '../model/fonctions.php';
         ?>
 
         <!-- inclusion de l'entête du site -->
-        <?php include_once('header.php'); ?>
+        
         
         <?php foreach(getRecipes($recipes) as $recipe) : ?>
             <article>
@@ -28,5 +27,5 @@
         <?php endforeach ?>
  </div>
 <?php
-    include './view/view_footer.php';
+    include '../view/view_footer.php';
 ?>
