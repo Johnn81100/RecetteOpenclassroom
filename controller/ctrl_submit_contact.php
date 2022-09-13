@@ -1,13 +1,14 @@
 <?php
+include '../model/cleanInput.php';
 
 if (isset($_GET['submit']))
 {
     if(!empty($_GET['email']) AND !empty($_GET['textarea']))
     {
-        $email=$_GET['email'];
-        $texterea=$_GET['textarea'];
+        $email=cleanInput($_GET['email']);
+        $texterea=cleanInput($_GET['textarea']);
     
-        include '../view/view_submlit_contact.php';
+        include '../view/view_submit_contact.php';
     }
     else
     {
